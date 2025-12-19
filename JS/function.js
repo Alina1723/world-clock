@@ -1,5 +1,5 @@
 //London
-function updateLondonTime() {
+function updateTime() {
   let london = document.querySelector("#london");
   let londonDate = london.querySelector(".date");
   let londonTime = london.querySelector(".time");
@@ -7,12 +7,8 @@ function updateLondonTime() {
   londonTime.innerHTML = `${moment()
     .tz("Europe/London")
     .format("h:mm:ss")} <small>${moment().format("A")}</small>`;
-}
+  //Cancun
 
-updateLondonTime();
-setInterval(updateLondonTime, 1000);
-//Cancun
-function updateCancunTime() {
   let cancun = document.querySelector("#cancun");
   let cancunDate = cancun.querySelector(".date");
   let cancunTime = cancun.querySelector(".time");
@@ -20,7 +16,23 @@ function updateCancunTime() {
   cancunTime.innerHTML = `${moment()
     .tz("America/Cancun")
     .format("h:mm:ss")} <small>${moment().format("A")}</small>`;
+
+  let tallinn = document.querySelector("#tallinn");
+  let tallinnDate = tallinn.querySelector(".date");
+  let tallinnTime = tallinn.querySelector(".time");
+  tallinnDate.innerHTML = moment().tz("Europe/Tallinn").format("MMMM Do YYYY");
+  tallinnTime.innerHTML = `${moment()
+    .tz("Europe/Tallinn")
+    .format("h:mm:ss")} <small>${moment().format("A")}</small>`;
+
+  let lourde = document.querySelector("#lourde");
+  let lourdeDate = lourde.querySelector(".date");
+  let lourdeTime = lourde.querySelector(".time");
+  lourdeDate.innerHTML = moment().tz("Europe/Lourde").format("MMMM Do YYYY");
+  lourdeTime.innerHTML = `${moment()
+    .tz("Europe/Lourde")
+    .format("h:mm:ss")} <small>${moment().format("A")}</small>`;
 }
 
-updateCancunTime();
-setInterval(updateCancunTime, 1000);
+updateTime();
+setInterval(updateTime, 1000);
