@@ -68,3 +68,8 @@ footer {
 footer a {
   color: #53a8b6;
 }
+
+.home-link {
+  text-decoration: none;
+  color: #1f3e5c;
+}

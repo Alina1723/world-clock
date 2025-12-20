@@ -47,11 +47,11 @@ function updateCity(event) {
             <h4>${cityName}</h4>
             <div class="date">${cityDate.format("MMMM Do YYYY")}</div>
           </div>
-          <div class="time">${cityTime.format(
-            "h:mm:ss"
-          )} <small>${cityTime.format("A")}</small></div>
+          <div class="time">${cityTime.format("h:mm")} <small>${cityTime.format(
+    "A"
+  )}</small></div>
         </div>
-        <a href="/">Back Home</a>
+        <a href="/" class="home-link">Back Home</a>
   `;
 }
 
